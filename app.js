@@ -1,9 +1,18 @@
 let body = document.querySelector("body");
-let image = document.querySelector(".salut")
-let barre = document.querySelector(".barre")
+let image = document.querySelector(".salut");
+let barre = document.querySelector(".barre");
 
-let i = 0;
-i++;    
+var i = 0;
+var ouverte = false;
+if(!ouverte){
+    ouverte = true;
+    image.addEventListener('click', function(){
+      
+        image.setAttribute("src","images/non.png");
+        
+    });
+};
+
 
 body.addEventListener('click', function(event){
     var newDiv = document.createElement("div");
@@ -25,15 +34,13 @@ body.addEventListener('click', function(event){
     
     
     if(i>=60) {
-        premiere_div = document.querySelector(".div"+String(i-59))
-        body.removeChild(premiere_div)
+        premiere_div = document.querySelector(".div"+String(i-59));
+        body.removeChild(premiere_div);
         
     }
-    if(i===5){
-        
-        image.setAttribute("src","images/img_enveloppe_ouverte.png")
-    }
-}, false)
+    
+   
+}, false);
 
 
 body.addEventListener('mousemove', function(event){
@@ -44,7 +51,7 @@ body.addEventListener('mousemove', function(event){
     }
     
     else{
-        console.log(screen.width)
+        
         if(cooX>(screen.width-(barre.offsetWidth/2))){
             barre.style.left = (screen.width-barre.offsetWidth/2).toString()+"px";
         }
@@ -54,17 +61,22 @@ body.addEventListener('mousemove', function(event){
     }
 
 },false);
+
 body.addEventListener('touchmove', function(event){
     
-    cooX = event.clientX;
-    if(cooX>(0+barre.offsetWidth/2) && cooX<(screen.width-(barre.offsetWidth/2))){
-        barre.style.left = cooX+"px";
+    var touch = event.targetTouches[0].clientX;
+    
+   
+    
+    if(touch>(0+barre.offsetWidth/2) && touch<(screen.width-(barre.offsetWidth/2))){
+        barre.style.left = touch.toString()+"px";
     }
     
     else{
-        console.log(screen.width)
-        if(cooX>(screen.width-(barre.offsetWidth/2))){
+        
+        if(touch>(screen.width-(barre.offsetWidth/2))){
             barre.style.left = (screen.width-barre.offsetWidth/2).toString()+"px";
+            
         }
         else{
             barre.style.left =barre.offsetWidth/2+"px";
@@ -72,6 +84,8 @@ body.addEventListener('touchmove', function(event){
     }
 
 },false);
+
+
 
 
 
