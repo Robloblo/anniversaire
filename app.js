@@ -7,9 +7,9 @@ body.addEventListener('click', function(event){
     newDiv.classList.add("div"+String(i));
     //newDiv.innerHTML = event.clientX +" " +event.clientY;
 
-
-    newDiv.style.height = "3em";
-    newDiv.style.width = "3em";
+    taille_rand = (2+Math.floor(Math.random()*4)).toString()
+    newDiv.style.height = taille_rand+"em";
+    newDiv.style.width = taille_rand+"em";
     newDiv.style.borderRadius = "100%";
     newDiv.style.position = "absolute"
     newDiv.style.top =  (event.clientY ).toString()+"px"
@@ -20,8 +20,8 @@ body.addEventListener('click', function(event){
     body.appendChild(newDiv);
     i++;
 
-    if(i>=20) {
-        premiere_div = document.querySelector(".div"+String(i-19))
+    if(i>=60) {
+        premiere_div = document.querySelector(".div"+String(i-59))
         body.removeChild(premiere_div)
 
     }
