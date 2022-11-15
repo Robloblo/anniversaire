@@ -54,6 +54,24 @@ body.addEventListener('mousemove', function(event){
     }
 
 },false);
+body.addEventListener('touchmove', function(event){
+    
+    cooX = event.clientX;
+    if(cooX>(0+barre.offsetWidth/2) && cooX<(screen.width-(barre.offsetWidth/2))){
+        barre.style.left = cooX+"px";
+    }
+    
+    else{
+        console.log(screen.width)
+        if(cooX>(screen.width-(barre.offsetWidth/2))){
+            barre.style.left = (screen.width-barre.offsetWidth/2).toString()+"px";
+        }
+        else{
+            barre.style.left =barre.offsetWidth/2+"px";
+        }
+    }
+
+},false);
 
 
 
