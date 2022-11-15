@@ -1,4 +1,5 @@
 let body = document.querySelector("body");
+let image = document.querySelector(".salut")
 let i = 0;
 i++;    
 
@@ -19,7 +20,7 @@ body.addEventListener('click', function(event){
     newDiv.style.transform = "translate(-50%,-50%)";
     body.appendChild(newDiv);
     i++;
-
+    image.setAttribute("src","images/img_enveloppe_ouverte.png")
     if(i>=60) {
         premiere_div = document.querySelector(".div"+String(i-59))
         body.removeChild(premiere_div)
