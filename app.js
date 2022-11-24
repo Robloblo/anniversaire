@@ -45,7 +45,9 @@ body.addEventListener('click', function(event){
         
     }
 }, false);
-setInterval(ma_fonction,40);
+
+
+setInterval(ma_fonction,60);
 function ma_fonction(){
    
     var newDiv = document.createElement("div");
@@ -59,7 +61,7 @@ function ma_fonction(){
     newDiv.style.height = taille_rand+"em";
     newDiv.style.width = taille_rand+"em";
     newDiv.style.borderRadius = "100%";
-    newDiv.style.position = "absolute"
+    newDiv.style.position = "relative"
     newDiv.style.top =  (cooY).toString()+"px"
     newDiv.style.left =  (cooX ).toString()+"px"
     newDiv.style.zIndex = "-2"
@@ -91,7 +93,7 @@ function ma_fonction(){
 
 
 
-body.addEventListener('mousemove', function(event){
+/*body.addEventListener('mousemove', function(event){
     
     cooX = event.clientX;
     if(cooX>(0+barre.offsetWidth/2) && cooX<(screen.width-(barre.offsetWidth/2))){
@@ -134,7 +136,7 @@ body.addEventListener('touchmove', function(event){
 },false);
 
 
-
+*/
 
 
 
