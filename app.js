@@ -63,6 +63,7 @@ function ma_fonction(){
     newDiv.style.top =  (cooY).toString()+"px"
     newDiv.style.left =  (cooX ).toString()+"px"
     newDiv.style.zIndex = "-2"
+    newDiv.style.boxShadow = "0px 0px 10px black"
     newDiv.style.backgroundColor = "rgb("+liste_couleur[Math.floor(Math.random()*12)].toString()+")";
     
     /*"rgb("+Math.floor(Math.random()*255).toString()+","+Math.floor(Math.random()*255).toString()+","+Math.floor(Math.random()*255).toString()+")";*/

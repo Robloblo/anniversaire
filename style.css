@@ -16,7 +16,7 @@ body {
     max-height:80vmin;
     max-width:80vmin;   
     background-repeat: no-repeat;
-    
+    overflow: hidden;
 }
 .salut{
     width:100%;
@@ -34,7 +34,9 @@ body {
     transform: translate(-50%,-100%);
     top:99.5%;
 }
-
+.div{
+    overflow: hidden;
+}
 
 .card {
     position: fixed;
