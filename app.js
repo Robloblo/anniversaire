@@ -61,7 +61,7 @@ function ma_fonction(){
     newDiv.style.height = taille_rand+"em";
     newDiv.style.width = taille_rand+"em";
     newDiv.style.borderRadius = "100%";
-    newDiv.style.position = "relative"
+    newDiv.style.position = "fixed"
     newDiv.style.top =  (cooY).toString()+"px"
     newDiv.style.left =  (cooX ).toString()+"px"
     newDiv.style.zIndex = "-2"
